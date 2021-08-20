@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <title>Document</title>
+  <style>
+    article > div {
+      background-color: black;
+      height: 50Px;
+      width: 50px;
+      margin: 4px;
+      float: left;
+      cursor: pointer;
+
+    }
+  </style>
+</head>
+<body>
+<script type="text/babel">
+  /* var x = 5;
+
+   if (x) {
+       x = 20
+       let x = 20
+   }
+   console.log(x); */
+
+  // se cambio por elt por es un issue con var, dejaria a todo los cuadros con index 10, es un error
+  for (let index = 0; index < 10; index++) {
+    var box = document.createElement('div');
+    box.onclick = function(){
+      console.log("Hey I¿m number "+ index);
+    }
+    document.getElementsByTagName('article')[0].appendChild(box);
+
+  }
+</script>
+
+<article></article>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <title>Document</title>
+  <style>
+    article > div {
+      background-color: black;
+      height: 50Px;
+      width: 50px;
+      margin: 4px;
+      float: left;
+      cursor: pointer;
+
+    }
+  </style>
+</head>
+<body>
+<script type="text/babel">
+  /*  const car = "Honda";
+   car = "BMW";
+   console.log(car); */
+  /*
+          const cars =['Honda','BMW'];
+          console.log(cars);
+           cars.push('Ferrari');
+           console.log(cars);*/
+
+  const car = {
+    brand : 'BMW',
+    doors: 2,
+    engine: 3.0
+  }
+
+  car.brand = 'Ferrari';
+  console.log(car);
+</script>
+
+<article></article>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+<script type=text/babel>
+  // let adults = ["john","Peter","Maria"];
+  // let kids = ["Jhonny","Pablito", "Marianita"];
+  // let people = ["Juan","Williams",...kids, ...adults];
+
+  // console.log(people);
+
+  var sendData = function (username, email, password) {
+
+    console.log("DATA SENT", username, email, password);
+  }
+  var someData = ["Rico","rico@codingfaculty.com", "secret"];
+  // sendData("Rico","rico@codingfaculty.com", "secret");
+  //sendData(someData); //da error
+  sendData(...someData);
+
+  //arreglo de objetos cars
+  var cars =[
+    {brand :"Honda",doors:2},
+    {brand :"Porsche",doors:4}
+  ];
+
+  var newCars =[
+    {brand :"Toyota",doors:2},
+    {brand :"Mercedes",doors:4}
+  ];
+
+
+  // vamos a meter los newCars en cars
+  cars.push(newCars);
+  console.log(cars); //los mete como arreglos
+
+  //Para meter los nuevos carros perro como nuevos objetos al arreglo de objetos "cars" seria asi:
+  cars.push(...newCars);
+  console.log(cars);
+
+
+
+</script>
+
+</body>
+</html>
